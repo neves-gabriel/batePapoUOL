@@ -1,10 +1,12 @@
 body{
     width: 414px;
-    background: #EEEEEE;
+    background: #F3F3F3;
     margin:0; 
     padding:0;
 }
-
+ion-icon {
+    cursor: pointer;
+}
 
 
 
@@ -32,16 +34,41 @@ body{
     height: 53px;
 }
 
+
 .containerIcon ion-icon {
-    position: relative;
-    right: 0;
     font-size: 50px;
-    cursor: pointer;
 }
 
 
+.barra_enviarMensagem {
+    position: fixed;
+    padding: 0px 18px 0px 18px;
+    width: 414px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 0;
+    left: 0;
+    height: 80px;    
+    color: #000000;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);    
+    z-index: 2;
+}
 
+.barra_enviarMensagem input {
+    border: none;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 18px;
+    color: #000000;
 
+}
+
+.barra_enviarMensagem ion-icon {
+    font-size: 26px;
+}
 
 
 
