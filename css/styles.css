@@ -1,3 +1,52 @@
+body{
+    width: 414px;
+    background: #EEEEEE;
+    margin:0; 
+    padding:0;
+}
+
+
+
+
+
+.barra_topo {
+    position: fixed;
+    padding: 16px 22px 0px 22px;
+    width: 414px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    height: 64px;    
+    color: black;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+    font-style: normal;
+    font-weight: normal;
+    z-index: 2;
+}
+
+.containerLogo {
+    width: 75px;
+    height: 53px;
+}
+
+.containerIcon ion-icon {
+    position: relative;
+    right: 0;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
 @media (max-width: 614px){
 
 }
