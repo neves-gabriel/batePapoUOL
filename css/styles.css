@@ -14,7 +14,7 @@ ion-icon {
 .barra_topo {
     position: fixed;
     padding: 16px 22px 0px 22px;
-    width: 414px;
+    width: 370px;
     display: flex;
     align-content: center;
     justify-content: space-between;
@@ -43,7 +43,7 @@ ion-icon {
 .barra_enviarMensagem {
     position: fixed;
     padding: 0px 18px 0px 18px;
-    width: 414px;
+    width: 370px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -71,8 +71,46 @@ ion-icon {
 }
 
 
+.mensagens_chat {
+    margin-top: 106px;
+    width: 414px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+}
 
+.statusUsuario {
+    min-height: 40px;
+    padding: 0px 8px 0px 8px;
+    background: #DCDCDC;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
 
+.msgAberta {
+    min-height: 40px;
+    padding: 0px 8px 0px 8px;
+    background: #FFFFFF;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.msgReservada {
+    min-height: 40px;
+    padding: 0px 8px 0px 8px;
+    background: #FFDEDE;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
 
 @media (max-width: 614px){
 
