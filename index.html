@@ -5,46 +5,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Bate-papo UOL</title>
+
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">        
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
-    <main>
-        <div class="barra_topo">
-            <div class="containerLogo">
-                <img src="img/logoUOL.png" alt="logoUOL">
-            </div>
-            <div class="containerIcon">
-                <ion-icon name="people"></ion-icon>
-            </div>
-        </div>
+  <div class="overlay hidden" onclick="openMenu()"></div>
+  
+  <header>
+    <img src="img/logoUOL.png">
+    <ion-icon name="people" onclick="openMenu()"></ion-icon>
+  </header>
 
-        <div class="mensagens_chat">
-            <div class="statusUsuario">
-                <span class="horario"></span> <span class="remetente"></span>entra na sala...
-            </div>
-            <div class="msgAberta">
-                <span class="horario"></span> <span class="remetente"></span>para<span class="destinatario"></span>:<span class="mensagem"></span>
-            </div>
-            <div class="msgReservada">
-                <span class="horario"></span> <span class="remetente"></span> reservadamente para<span class="destinatario"></span>:<span class="mensagem"></span>
-            </div>
-        </div>
-        <div class="barra_enviarMensagem">
-            <div class="enviarMensagem"><input type="text" class="mensagem" placeholder="Escreva aqui...">
-            </div>
-            <div class="containerIcon">
-                <ion-icon name="paper-plane-outline"></ion-icon>
-            </div>
-        </div>
-    </main>
-    <script src="js/scripts.js"></script>
+  <main>
+    <ul class="container-messages">
+ 
+    </ul>
+  </main>
+
+  <footer>
+    <div class="message-field">
+      <input placeholder="Escreva aqui..." class="message-input"></input>
+      <span class="sending">Enviando para Todos</span>
+    </div>
+    <ion-icon name="paper-plane-outline"></ion-icon>
+  </footer>
+
+  <div class="menu hidden">
+    <h3 class="menu-title">Escolha um contato para enviar mensagem:</h3>
+    <ul class="users">
+    </ul>
+    <h3 class="menu-title">Escolha a visibilidade:</h3>
+    <ul class="visibilities">
+      <li class="visibilities-public selected" onclick="selectVisibility(this, 'message')">
+        <ion-icon name="lock-open"></ion-icon>
+        Público
+        <ion-icon class="check" name="checkmark-outline"></ion-icon>
+      </li>
+      <li class="visibilities-private" onclick="selectVisibility(this, 'private_message')">
+        <ion-icon name="lock-closed"></ion-icon>
+        Reservadamente
+        <ion-icon class="check" name="checkmark-outline"></ion-icon>
+      </li>
+    </ul>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="js/scripts.js"></script>
 </body>
+
 </html>
