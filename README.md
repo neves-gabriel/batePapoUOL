@@ -1,4 +1,4 @@
-# Projeto_05_batePapoUOL
+# batePapoUOL
 
 ### Projeto com JavaScript de implementação de um bate-papo totalmente funcional, inspirado no saudoso Bate-Papo UOL.
 
@@ -6,5 +6,5 @@
 
 ### Site disponivel em: 
 
-#### Preview do projeto:
-![Preview do projeto](img/preview.png)
+#### Previews do projeto:
+![Preview do projeto - desktop1](assets/previews/preview-desktop1.png)
