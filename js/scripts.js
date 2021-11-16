@@ -49,14 +49,14 @@ function renderMessages (response) {
 
     for (let i = 0 ; i < response.data.length ; i ++ ) {
         if (response.data[i].type === "status") {
-            ul.innerHTML += `<li class="status-user">
+            ul.innerHTML += `<li class="status-user" data-identifier="message">
                 <span class="horario">(${response.data[i].time})</span>
                 <strong>${response.data[i].from}</strong>
                 <span>${response.data[i].text}</span>
             </li>`
         }
         if (response.data[i].type === "message") {
-            ul.innerHTML += `<li class="public-chat">
+            ul.innerHTML += `<li class="public-chat" data-identifier="message">
                 <span class="horario">(${response.data[i].time})</span>
                 <strong>${response.data[i].from}</strong>
                 <span> para </span>
@@ -65,7 +65,7 @@ function renderMessages (response) {
             </li>`
         }
         if (response.data[i].type === "private_message" && (response.data[i].to ===username || response.data[i].from ===username)) {
-            ul.innerHTML += `<li class="private-chat">
+            ul.innerHTML += `<li class="private-chat" data-identifier="message">
                 <span class="time">(${response.data[i].time})</span>
                 <strong>${response.data[i].from}</strong>
                 <span> para </span>
@@ -113,7 +113,7 @@ function renderUsers (response) {
     if (recipient === "Todos") {
         userType = "selected";
     }
-    userList.innerHTML = `<li class="visibility-public ${userType}" onclick="selectRecipient(this)">
+    userList.innerHTML = `<li class="visibility-public ${userType}" onclick="selectRecipient(this)" data-identifier="participant">
         <ion-icon name="people"></ion-icon>
         <span class="username">Todos</span>
         <ion-icon class="check" name="checkmark-outline">
@@ -126,7 +126,7 @@ function renderUsers (response) {
         } else {
             userType = "";
         }
-        userList.innerHTML += `<li class="visibility-public ${userType}" onclick="selectRecipient(this)">
+        userList.innerHTML += `<li class="visibility-public ${userType}" onclick="selectRecipient(this)" data-identifier="participant">
         <ion-icon name="person-circle"></ion-icon>
         <span class="username">${response.data[i].name}</span>
         <ion-icon class="check" name="checkmark-outline">

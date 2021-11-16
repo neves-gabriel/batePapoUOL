@@ -31,7 +31,7 @@
 
   <footer>
     <div class="message-field">
-      <input placeholder="Escreva aqui..." class="message-input"></input>
+      <input placeholder="Escreva aqui..." class="message-input" data-identifier="send-message"></input>
       <span class="sending">Enviando para Todos</span>
     </div>
     <ion-icon name="paper-plane-outline"></ion-icon>
@@ -43,12 +43,12 @@
     </ul>
     <h3 class="menu-title">Escolha a visibilidade:</h3>
     <ul class="visibilities">
-      <li class="visibilities-public selected" onclick="selectVisibility(this, 'message')">
+      <li class="visibilities-public selected" onclick="selectVisibility(this, 'message')" data-identifier="visibility">
         <ion-icon name="lock-open"></ion-icon>
         Público
         <ion-icon class="check" name="checkmark-outline"></ion-icon>
       </li>
-      <li class="visibilities-private" onclick="selectVisibility(this, 'private_message')">
+      <li class="visibilities-private" onclick="selectVisibility(this, 'private_message')" data-identifier="visibility">
         <ion-icon name="lock-closed"></ion-icon>
         Reservadamente
         <ion-icon class="check" name="checkmark-outline"></ion-icon>
