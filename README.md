@@ -7,4 +7,4 @@
 ### Site disponivel em: https://neves-gabriel.github.io/batePapoUOL/
 
 #### Previews do projeto:
-![Preview do projeto - desktop1](assets/previews/preview-desktop1.png)
+![Preview do projeto - desktop1](img/preview.png)
